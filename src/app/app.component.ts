@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '我是標題';
-  subTitle = '我是副標題'
+  subTitle = '<u>我是副標題</u>'
 }
