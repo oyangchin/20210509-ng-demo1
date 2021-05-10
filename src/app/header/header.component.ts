@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   keyword = "";
-
+  highlight = true;
   constructor() {
 
   }
@@ -18,6 +18,8 @@ export class HeaderComponent implements OnInit {
 
   search($event){
     console.log('>>>>>> Search Start !', $event);
+    this.highlight = !this.highlight;
+    console.log('>>>>>> Search highlight !', this.highlight);
   }
 
   changeKeywordHandler($event){
