@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   keyword = "";
   highlight = true;
   fontSize = 12;
+  redColor = 'red'
   constructor() {
 
   }
