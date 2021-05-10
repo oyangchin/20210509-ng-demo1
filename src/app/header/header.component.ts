@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  keyword = "";
+
+  constructor() {
+
+  }
 
   ngOnInit(): void {
+  }
+
+  search($event){
+    console.log('>>>>>> Search Start !', $event);
+  }
+
+  changeKeywordHandler($event){
+    console.log('>>>>>> changeKeywordHandler Start !', $event.target.value);
+    var value = $event.target.value;
+    this.keyword = value;
+
   }
 
 }
