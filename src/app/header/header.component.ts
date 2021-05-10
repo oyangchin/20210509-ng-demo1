@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
 
   keyword = "";
   highlight = true;
+  fontSize = 12;
   constructor() {
 
   }
@@ -20,6 +21,7 @@ export class HeaderComponent implements OnInit {
     console.log('>>>>>> Search Start !', $event);
     this.highlight = !this.highlight;
     console.log('>>>>>> Search highlight !', this.highlight);
+    this.fontSize++;
   }
 
   changeKeywordHandler($event){
