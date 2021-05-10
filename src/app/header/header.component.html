@@ -7,8 +7,8 @@
       <i class="ion-search"></i>
     </button>
 
-    <span *ngIf="keyword.length == 0" [style.color]="redColor">請輸入查詢條件～</span>
-
-    <span [style.font-size.px]="fontSize">goooood</span>
+    <span *ngIf="keyword.length === 0; else searchHint" [style.color]="redColor">請輸入查詢條件～</span>
+    <ng-template #searchHint>您輸入的關鍵字為：{{keyword}}</ng-template>
+    <p [style.font-size.px]="fontSize">goooood</p>
   </div>
 </nav>
