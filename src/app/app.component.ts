@@ -11,7 +11,7 @@ export class AppComponent {
 
 
 
-  data = [
+  originData = [
     {
       title:"sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
       slug:"zp7yqc",
@@ -60,4 +60,17 @@ export class AppComponent {
       favoritesCount:5
   }
 ];
+
+data = this.originData;
+
+searchArticle($event){
+console.log('>>>>>> searchArticle :', $event)
+  if ($event) {
+    this.data = this.originData.filter(article => article.title.indexOf($event) !== -1)
+  } else {
+    this.data = this.originData;
+  }
+
+}
+
 }

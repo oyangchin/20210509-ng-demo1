@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +11,9 @@ export class HeaderComponent implements OnInit {
   highlight = true;
   fontSize = 12;
   redColor = 'red'
+
+  @Output() keywordChange = new EventEmitter<String>();
+
   constructor() {
 
   }
@@ -23,6 +26,8 @@ export class HeaderComponent implements OnInit {
     this.highlight = !this.highlight;
     console.log('>>>>>> Search highlight !', this.highlight);
     this.fontSize++;
+    this.keywordChange.emit(this.keyword);
+
   }
 
   changeKeywordHandler($event){
